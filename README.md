@@ -8,7 +8,7 @@ This project explores customer demographics, purchasing behavior, and marketing 
 ## Data cleaning and preparation
 
 - Checked for duplicate rows and removed all rows belonging to duplicate groups using `drop_duplicates(keep=False)`.
-- Added `Total_Children`, the sum of children and teenagers in each household.
+- Added new column `Total_Children`, the sum of children and teenagers in each household.
 - Combined the marital-status indicator columns into a numeric `Marital_Status` code and a descriptive `Marital_Status_Label`.
 - Combined the education indicator columns into an `Education_Level` code and an `Education_Level_Label`.
 - Created `Accepted_Campaigns`, set to 1 if a customer accepted at least one campaign (including `Response`), and 0 otherwise.
@@ -16,22 +16,18 @@ This project explores customer demographics, purchasing behavior, and marketing 
 
 ## Analysis performed
 
-The notebook examines:
-
 - Numeric correlations with campaign acceptance.
 - Campaign acceptance and spending by age group.
-- Web, catalog, and store purchase totals, for all customers and for campaign accepters.
+- Web, catalog, and store purchase totals, for all customers and those who accepted campaigns.
 - Relationships between household children, education, and spending or campaign acceptance.
-- Spending and campaign acceptance by marital-status category.
+- Examined spending and campaign acceptance according to marital status.
 
-## Findings recorded in the notebook
+## Analysis Findings
 
 - Customers aged 30–70 are identified as higher spenders, while some younger and older age groups are noted as having higher campaign acceptance.
 - Catalog customers are described as more likely to accept campaigns, while store purchases contribute more spending.
 - Households with fewer children are associated with higher spending and campaign acceptance.
 - Education and marital status are described as having limited influence overall, though married, single, and together customers contribute more total spending.
-
-These are exploratory observations from the notebook, not evidence of causal relationships. The channel allocation recommendation in the notebook should be clarified before use.
 
 ## Running the analysis
 
